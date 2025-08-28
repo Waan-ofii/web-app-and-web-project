@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="culculator.css">
+    <title>phone culculator</title>
+</head>
+<body>
+    <p class="input-field culcu"></p>
+   <div>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('1'); "> 1 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('2'); "> 2 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('3'); "> 3 </button>
+    <button class="cul-btn  orange-btn" onclick=" updateCulculation(' + ')"> + </button>      
+</div>
+<div>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('4') "> 4 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('5') "> 5 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('6') "> 6 </button>
+    <button class="cul-btn  orange-btn" onclick=" updateCulculation(' - ')"> - </button>
+</div> 
+    <div>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('7')"> 7 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('8') "> 8 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('9') "> 9 </button>
+    <button class="cul-btn  orange-btn" onclick=" updateCulculation(' * ')"> * </button>
+</div>
+</div> 
+    <div>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('0')"> 0 </button>
+    <button class="cul-btn  grey-btn" onclick=" updateCulculation('.') "> . </button>
+    <button class="cul-btn  grey-btn" onclick=" 
+    culculation = eval(culculation);
+        displayCulculation();
+        localStorage.setItem('culculation',culculation);
+    "> = </button>
+    <button class="cul-btn  orange-btn" onclick=" updateCulculation(' / ')"> / </button>
+</div>
+<div><button class="cul-btn  grey-btn clear" onclick="
+ culculation = '';
+        displayCulculation();
+        localStorage.setItem('culculation',culculation);
+">clear</button></div>
+
+    <script>
+        let culculation = localStorage.getItem('culcu') || '';
+        function updateCulculation(value){
+            culculation +=value;
+            displayCulculation();
+            localStorage.setItem('culculation',culculation);
+        }
+   function displayCulculation(){
+    document.querySelector('.input-field').innerHTML = culculation;
+   }
+
+    </script>
+
+</body>
+</html>
