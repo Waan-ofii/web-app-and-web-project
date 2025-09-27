@@ -1,0 +1,181 @@
+:root{
+    --white-color: #fff;
+    --bright-blue: #6bd2ff;
+    --blue:#002d75;
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+   margin: 0;
+   font-family: 'poppins','sans-serif';
+}
+header{
+    width: 1326px;
+    height: 100vh;
+    margin: 0 74px;
+}
+nav{
+    width:1326px;
+    height: 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    padding: 36px 0;
+}
+nav .logo{
+    font-family: "Roboto" sans-serif;
+    font-size: 40px;
+
+}
+nav ul{
+display: flex;
+align-items: center;
+gap: 60px;
+list-style: none;
+}
+nav ul li a{
+text-decoration: none;
+font-size: 18px;
+color: black;
+}
+header .hero{
+height: 642px;
+margin-top:8px;
+display: flex;
+}
+header .hero .left{
+justify-content: center;
+align-content: center;
+font-family:bold ;
+width:682px;
+} 
+header .hero .left h6{
+font-family: "roboto" sans-serif;
+font-size: 16px;
+ }
+ header .hero .left h1{
+ font-family: "roboto" sans-serif;
+ font-size: 48px;
+ }
+ header .right {
+ width: 682px;
+ }
+ header .right img{
+ width: 100%;
+ height: 100%;
+ border-radius: 30px;
+ }
+ .Mission{
+    width: 1326px;
+    height: 683px;
+    margin: 0 74px;
+    background-image: url(images/patient.png);
+    border-radius: 30px;
+    justify-self: auto;
+    position: relative;
+ }
+.Mission .message{
+    width:563px;
+    justify-content: start;
+    align-items: center;
+    top: 69px;
+    left: 44px;
+    position: absolute;
+}
+.Mission .message h6{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.Mission .message h2{
+    font-family:"Raleway" sans-serif;
+    font-size: 42px;
+}
+.Mission .message p{
+font-size: 16px;
+}
+.feature{
+    width: 1326px;
+    margin: 8px 74px;
+    display: flex;
+}
+.feature .left{
+    width:682px;
+    align-content: center;
+       
+}
+.feature .left h1{
+font-family: "Roboto" sans-serif;
+font-weight: bold;
+font-size: 42px;
+margin:0 0 8px 0 ;
+justify-self:center;
+margin-bottom: 20px;
+
+}
+.feature .left h2{
+font-family: "Roboto" sans-serif;
+font-weight: bold;
+font-size: 32px;
+margin: 0 0 8px 0;
+margin-top: 20px;
+}
+.feature .left p{
+font-size: 16px;
+margin-top: 30px;
+}
+.feature .right{
+    display: flex;
+    flex-direction: column;
+}
+.feature .right img{
+    border-radius:30px ;
+}
+.feature .right .item2{
+display: flex;
+    
+}
+.feature .right .item2 .item{
+margin: 20px;
+margin-left: 0;
+}
+.partner{
+    width: 1326px;
+    margin: 8px 74px;
+}
+.partner h2{
+font-family: "Raleway" sans-serif;
+font-weight: bold;
+justify-self:center;
+}
+.partner .partners{
+ display: flex;
+ justify-content: space-between;
+    
+}
+.partner .part{
+ width: 162px;
+ height: 162px;
+ border-radius: 8px;
+}
+.contact{
+    width:1326px;
+    margin: 8px 74px;
+    display: flex;
+    
+}
+.contact .left{
+    width: 682px;
+}
+.contact .left form{
+    display: flex;
+    flex-direction: column;
+}
+.contact .left form .inp{
+    width: 400px;
+
+}
