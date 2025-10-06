@@ -1,16 +1,18 @@
 const nav = document.querySelector("nav");
+const textColor = document.querySelectorAll(".white");
+
 window.addEventListener("scroll",()=>{
     if(window.pageYOffset > 70){
-        nav.classList.add("nav-scroll");
+        nav.classList.add('nav-scroll');
     }else{
-        nav.classList.remove("nav-scroll");
+        nav.classList.remove('nav-scroll');
     }
 });
-const white=document.querySelectorAll("")
 window.addEventListener("scroll",()=>{
     if(window.pageYOffset > 70){
-        white.classList.add("white");
+        textColor.forEach(col=>col.classList.add('white'));
     }else{
-        white.classList.remove("white");
+        textColor.forEach(col=>col.classList.remove('white'));
     }
 });
+

@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 body{
-   margin: 0 30px;
+   margin: 0 auto;
    font-family: 'poppins','sans-serif';
    justify-self:center;
 }
@@ -42,6 +42,10 @@ border-radius:8px;
 position: fixed;
 z-index: 100;
 }
+.white{
+color:white;
+}
+
 nav .logo{
     font-family: "Roboto" sans-serif;
     font-size: 40px;
@@ -86,9 +90,7 @@ font-size: 16px;
     padding-top: 20px;
  }
  .Mission{
-    /*width:1326px;*/
     height: 683px;
-    /* margin: 0 74px;*/
     background-image: url(images/patientp.png);
     border-radius: 30px;
     justify-self: auto;
