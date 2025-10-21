@@ -105,12 +105,15 @@ h4{
 }
 .about{
     width:100%;
-    padding : 100px opx;
+    padding: 50px;
     background-color: #191919;
+    display: flex;
 }
 .about img{
-height:auto ;
-width:430px;
+height: 500px;
+width:350px;
+object-fit: cover;
+
 }
 .about-text{
     width:550px;
