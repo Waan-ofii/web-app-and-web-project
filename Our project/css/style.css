@@ -1,0 +1,228 @@
+:root{
+    --primary-Emerland-Green :#2ecc71;
+    --secondary-Sky-blue: #5dade2;
+    --Accent-light-yellow: #f4d03f;
+    --backGround-color:#f2f3f4;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*utility class*/
+
+.container{
+    margin:auto;
+    overflow:auto;
+    padding:0 20px;
+}
+.btn{
+    font-size: bold;
+    color: #111110;
+    background:var(--primary-Emerland-Green);
+    border-radius: 30px;
+    width:200px;
+    padding: 10px 20px;
+    list-style: none;
+    text-decoration: none;
+}
+h1{
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*header*/
+header{
+    height: 100vh;
+    background:var(--backGround-color) ;
+   /* background: #d4d5d0;*/
+}
+header .container .navig{
+    display: flex;
+    justify-content: space-between;
+    /*background: #d4d5d0;*/
+}
+header .logo{
+    display:flex;
+    gap:5px;
+    align-items: center;
+}
+header .logo p{
+font-size: 20px;
+font-weight: bold;
+}
+header .logo img{
+    border-radius: 50%;
+}
+header nav ul{
+    display: flex;
+    gap:50px;
+    list-style:none;
+    padding-top: 20px;
+}
+header nav ul a{
+    text-decoration: none;
+    color:black;
+}
+header .log-s{
+border: 1px solid black;
+border-radius: 30px;
+padding: 7px 18px;
+background:var(--Accent-light-yellow);
+margin-left: 20px;
+}
+#hero-section{
+display: flex;
+/*background: linear-gradient(to bottom , rgb(39, 80, 22),rgb(222, 255, 60),);*/
+opacity: 0.;
+
+}
+#hero-section .hero-left{
+    height:600px; 
+}
+#hero-section .hero-left h1{
+    font-family: sans-serif;
+    font-weight: bold;
+     text-align: center;
+    padding: 100px 20px 20px;
+}
+#hero-section .hero-left p{
+    font-size: 24px;
+    padding:0 10px;
+    line-height: 1.7em;
+    font-weight: 500;
+
+}
+#hero-section .hero-left .btn{
+margin: 100px 50px;
+}
+#hero-section .hero-right img{
+    padding-top: 5px;
+    border-radius: 70%;
+
+}
+#about{
+height: 650px;
+background: url('/images/best.jpg')no-repeat center center/cover;
+background-size:cover 600px;
+opacity:0.85;
+
+}
+#about h2{
+    color: #fff;
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 1;
+    text-align: center;
+    padding-bottom:30px;
+
+}
+#about p{
+    color:#fff;
+    font-size: 21px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.7em;
+}
+#about .abt{
+    margin: auto;
+    padding: 100px 50px 20px;
+    padding-right:500px;
+}
+#about .English{
+    z-index: 2;
+    opacity: 1;
+    color:#3f51b5
+}
+#about .amharic{
+    z-index: 2;
+    opacity: 1;
+    color:#2e7d32;
+}
+#about .oromic{
+    z-index: 2;
+    opacity: 1;
+    color:#e65100;
+}
+#Feature .container{
+display: grid;
+margin:20px 0;
+}
+#Feature .top h2{
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#Feature .top p{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+#Feature .top{
+height: 250px;
+justify-items: center;
+}
+#Feature .top p{
+    padding: 30px;
+}
+#Feature .bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#Feature .bottom .mult{
+    width:270px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 30px;
+    
+}
+#Feature .bottom .mult h3{
+text-align: center;
+padding: 20px;
+}
+#Feature .bottom .mult{
+    background-color: #5dade2;
+}
+#Feature .bottom .mult h3{
+    background-color: #e65100;
+    border-radius: 30px;
+}
+#Feature .bottom .mult p{
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 15px;
+}
+#courses .container{
+display: grid;
+}
+#courses h2{
+    font-size: 40px;
+    padding: 50px;
+    text-align: center;
+}
+#courses .container .course-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+#courses .container .course-container img{
+    width:180px;
+    height: 180px;
+
+}
+#courses .container .btn{
+    text-align: center;
+}
+
+#courses .container .course-container img{
+    width:180px;
+    height: 180px;
+
+}
+footer{
+    background: var(--secondary-Sky-blue);
+}
