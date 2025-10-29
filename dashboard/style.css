@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0; 
+}
+.hole{
+    display :flex;
+    
+}
+ul{
+    list-style:none ;
+}
+.left{
+width: 20%;
+height: 100vh;
+background-color: rgb(17, 15, 62);
+}
+.left ul li{
+    padding: 20px 30px;
+    font-weight: bold;
+    color:white;
+
+}
+.right{
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(10, 94, 168);
+     align-items:center ;
+     color: white;
+          
+}
+
+.right .internal{
+    display: flex;
+    gap: 300px;
+    margin-top: 10px;
+    
+}
+
+.right  nav ul{
+    display: flex;
+    gap:50px;
+
+}
+.right nav input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.right nav ul img{
+border-radius:50% ;
+}
+
+.right nav ul a{
+    color: white;
+    text-decoration: none;
+}
+.right p{
+    color: white;
+    font-weight: 700;
+    font-family: serif;
+    padding-left: 30px;
+    font-size: 18px;
+}
