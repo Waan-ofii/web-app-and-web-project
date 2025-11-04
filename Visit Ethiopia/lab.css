@@ -53,7 +53,7 @@ padding: 80px 0px 20px 50px;
 .hero p{
 padding:0px 0px 10px 70px ;
 }
-button{
+.hero button{
 position: absolute;
 left: 40%;
 top: 70%;
@@ -70,5 +70,189 @@ button:hover{
 }
 .logo p:hover{
     text-shadow:0px 0px 20px rgb(168, 162, 162), 0 0 20px rgb(168, 162, 162);
+}
+.adventure{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  padding: 2rem;
+  background: black;
+  color:white;
+}
+.adventure .adventuretour{
+  grid-column:1/4; 
+  justify-self:center;
+}
+.adventure .adventureimage {
+  justify-self: center;
+}
+.adventure .adventureimage img{
+width:17rem;
+height: 15rem;
+border-radius: 50%;
+}
+.adventure .adventuretitle h1{
+  text-align: center;
+  background: linear-gradient(to right ,#075fe4, #124e66, #6200e6 , #c7eeee ) ;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant:small-caps;
+}
+.adventure .adventureparagraph p{
+  line-height: 1.5rem;
+  text-align: justify;
+  
+}
+.adventure .adventurereadmore{
+  justify-self: center;
+}
+.adventure .adventurereadmore a{
+  background-color: white;
+  border:2px solid #1b1f24;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  transform: capitalize;
+  color: #1b1f24;
+  font-weight: bold;
+  display: block;
+   width: fit-content;
+ /*text-align: left;*/
+  font-style: italic;
+  text-decoration: none;
+  &:hover{
+     background-color:#6489b6;
+     color:#fff;
+  }
+}
+.package{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  padding: 2rem;
+  background: black;
+  color:white;
+}
+.package .box{
+  border: 1px rgb(141, 141, 246) solid;
+  border-radius: 10px;
+  background-color: rgb(22, 22, 22);
+
+}
+.package .box:hover{
+  background-color: black;
+  border:1px  solid rgb(27, 27, 249) ;
+}
+.package .box .in_box{
+  padding: 20px;
+}
+.package .packagepoularpackage{
+  grid-column:1/4; 
+  justify-self:center;
+}
+.package .packageimag{
+  justify-self:center;
+}
+.package .packageimage img{
+  width:100%;
+height: 20rem;
+padding: 1rem;
+}
+.package .packagetitle h1{
+   text-align: center;
+  background: linear-gradient(to right ,#075fe4, #124e66, #6200e6 , #c7eeee ) ;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant:small-caps;
+}
+.package .packageparagraph P{
+  line-height: 1.5rem;
+  text-align: justify;
+}
+.package .packagebooknow{
+  justify-self: center;
+}
+.package .packagebooknow a{
+  background-color: white;
+  border:2px solid #1b1f24;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  transform: capitalize;
+  color: #1b1f24;
+  font-weight: bold;
+  display: block;
+   width: fit-content;
+ /*text-align: left;*/
+  font-style: italic;
+  text-decoration: none;
+  &:hover{
+     background-color:#6489b6;
+     color:#fff;
+  }
+}
+.contact{
+background-color: black;
+}
+.contact h1{
+  color: white;
+  text-align: center;
+}
+.contact form{
+  justify-self: center;
+
+}
+.contact input{
+  text-align: left;
+  display: block;
+  width : 600px;
+  padding: 30px 0;
+  background-color: rgb(22, 22, 22);
+  margin: 2rem 0;
+  border-radius: 10px;
+  border:1px solid rgb(141, 141, 246) solid;
+}
+.contact textarea{
+  width: 600px;
+  height: 200px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(22, 22, 22);
+  display: block;
+  margin-bottom: 20px;
+
+}
+.contact .but{
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 330px;
+  padding: 20px 0;
+  font-size: 18px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  font-weight: bold;
+   margin-left: 90px;
+}
+.contact .but:hover{
+  background-color:black ;
+  color: white;
+
+}
+footer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: black;
+  color: white;
+}
+footer .linktitle h1{
+  text-align: center;
+  background: linear-gradient(to right ,#075fe4, #124e66, #6200e6 , #c7eeee ) ;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant:small-caps;
+}
+.address p{
+  text-align: center;
 }
 
