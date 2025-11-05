@@ -245,30 +245,23 @@ footer{
   background-color: black;
   color: white;
 }
-footer .linktitle h1{
+footer div ul li{
+  list-style: none;
+}
+footer .link ul li a{
+  color:white;
+  text-decoration: none;
+  
+}
+footer  .linktitle h1{
   text-align: center;
   background: linear-gradient(to right ,#075fe4, #124e66, #6200e6 , #c7eeee ) ;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-variant:small-caps;
 }
-footer ul li{
-  list-style: none;
-}
-footer ul li:hover{
-  background-color: #6489b6;
-}
-footer ul li a{
-  color:white;
-  text-decoration: none;
-}
-footer ul li a:active{
-  color:blue;
-};
-footer .address{
-  grid-column: 1/5;
-}
-footer .address p{
+
+.address p{
   text-align: center;
 }
 
