@@ -1,0 +1,438 @@
+:root{
+    --dark-black : #000;
+    --black-blue : rgb(1, 1, 81);
+    --blue-pink-glows : linear-gradient(to right , #35e0f7, #9a55f5,#ede8f3);
+    --cyan-color: rgb(0, 255, 255);
+}
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+    font-size: 10px;
+      border: 1px solid red;  
+}
+
+h1,h2,a,li{
+background: var(--blue-pink-glows);
+    background-clip: text;
+    color:transparent;
+}
+h1{
+    font-size: 5rem;
+    font-weight: bold;  
+}
+a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+  color: #4dd9f5;
+  font-size: 2rem;
+  line-height: 2.5rem;  
+}
+
+button,.btn{
+    background-color: black;
+    color: var(--cyan-color);
+    width: 55%;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 3%;
+    border-radius: 3rem;
+    border: 1px solid var(--cyan-color);
+    animation: btnglow 2s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes btnglow{
+    0%{
+        box-shadow:0 0 0 var(--cyan-color) ;
+    }
+    100%{
+        box-shadow:0 0 2rem var(--cyan-color),0 0 2rem var(--cyan-color) ;
+    }
+}
+button:hover,.btn:hover{
+    color:black;
+    background: var(--cyan-color);
+}
+button:active,.btn:active{
+    color: blue;
+}
+/*hero-section*/
+.hero{
+    background:var(--dark-black);
+    color:white;
+}
+.hero .container{
+    justify-self:center;
+    height: 100vh;
+    display:grid;
+    grid-template-rows:10% 30% 60%;
+}
+.hero nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.hero nav .logo{
+    width: 50%;
+    display: flex;
+    gap:2%;
+    align-items: center;
+    padding: 2.5%;
+}
+.hero nav .logo img{
+    width: 8rem;
+    height: auto;
+    border-radius: 50%;
+}
+.hero nav ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero nav ul li{
+    list-style: none;
+    padding: 2% 5%;
+}
+.hero nav ul li a{
+    padding: 3%;
+}
+.hero nav ul li a:hover{
+color: rgb(39, 242, 195);
+}
+.hero nav ul li a:active{
+    color: blue;
+}
+.hero .mid{
+    margin: auto;
+}
+.hero .last{
+   display: grid;
+    grid-template-columns: 50% 50%;
+}
+.hero .last .left{
+    width: 100%;  
+}
+.hero .last .in_left{
+margin: auto 10%;
+height: 80%;
+}
+.hero .last .in_left h2{
+  padding: 2% auto;
+  line-height: 3rem;
+}
+.hero .last .in_left button{
+    margin-top: 10%;
+}
+.hero .last .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .last .imgcontainer{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+.hero .last .imgcontainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   animation: motion 2s linear infinite; 
+    animation-direction : alternate;
+}
+@keyframes motion{
+    0%{
+        width:100%;
+        height:100%;
+    }
+    100%{
+  width: 85%;
+  height:85%;      
+    }
+}
+/*about-section*/
+
+.about{
+    background: var(--black-blue);
+    height: 80vh;
+}
+.about .container{
+    justify-self:center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 3rem 0;
+
+}
+
+.about .container .imgcon{
+    height: 95%;
+    width: 90%;
+    justify-self:center;
+    margin: 2.5% 0;
+
+}
+.about .container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.about .container h1,
+.about .container h2{
+ padding: 2% 1%;
+}
+.about .container p{
+ padding: 2% 2%;
+ text-align: justify;
+ 
+}
+.about .container button{
+ margin: 7% 20%;
+}
+/*development section*/
+.development{
+    width: 100%;
+    background: var(--dark-black);
+    height: 90vh;
+
+}
+.development .container{
+    justify-self:center;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+}
+.development .container .devtitle{
+ grid-column: 1/4;
+ margin-bottom: 1rem;
+ align-self: center;
+ text-align: center;
+}
+
+.development .container .box{
+    border-radius: 3rem;
+    height: 40rem;
+    background: var(--black-blue); 
+}
+.development .container .box .in_box{
+    width: 100%;
+    border-radius: 3rem;
+}
+.development .container .box:hover{
+    position: relative;
+    top: -2%;
+    background-color:rgb(3, 3, 156) ;
+}
+.development .container .box h2{
+    text-align: center;
+}
+.development .box .icon{
+    justify-self: center;
+    padding: 2%;
+    margin-bottom:2% ;
+}
+.development .box .subtitle{
+    padding: 5% 1%;
+}
+.development .box .describe{
+padding: 3% 2%;
+text-align: justify;
+}
+/*skill-section*/
+.skill{
+    
+   background: var(--black-blue); 
+    height: 90vh;
+}
+
+.skill .container{
+    justify-self:center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.skill .container .tittleskill{
+    grid-column: 1/3;
+    text-align: center;
+    align-self: center;
+    
+}
+.skill .container .tittleskill h1{
+ padding: 2rem;
+}
+.skill .container .left{
+   width: 100%;
+   height: 47rem;  
+}
+.skill .container .left .skillcontainer{
+  background-color: black;
+  width:  85%;
+  height: 100%;
+  padding:5%  5%;
+  border-radius: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.skill .left .skillcontainer .in_skill{
+    height: 100%;
+    display:grid;
+    border-radius: 3rem;
+}
+.skill .skillcontainer  li{
+    width:70%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    margin-left:10%;    
+}
+.skill .skillcontainer h2{
+    text-align: center;
+}
+.skill .skillcontainer  li h3{
+    font-size: 2.7rem;
+}
+.skill .skillcontainer .in_skill .bars{
+    width: 100%;
+    height: 5px;
+    background-color:blue;
+    border-radius:30px ;
+}
+.skill .in_skill .bars span{
+    background: linear-gradient(to right, cyan, rgb(221, 238, 246));
+    float: left;
+    height: 5px;
+    border-radius: 30px;
+}
+.html{
+    width: 90%;
+}
+.css{
+    width: 80%;
+}
+.js{
+    width: 40%;
+}
+.php{
+    width: 30%;
+}
+.sql{
+    width:55%;
+}
+.skill .right{
+    
+    
+}
+.skill .right .projectContainer{
+    background-color: #000;
+    height: 47rem;
+    justify-self: center;
+    border-radius: 3rem;
+    display: grid;
+    gap:1rem;
+    justify-content: center;
+    text-align: center;
+    padding: 3% 2%;
+}
+.skill .right .projectContainer p{
+    text-align: justify;
+}
+.skill .right .projectbox{
+    background: var(--black-blue);
+    width: 80%;
+    height: 10rem;
+    border-radius: 3rem;
+    margin: 0 auto;
+    padding: 2%;
+}
+.skill .right .projectbox:hover{
+    box-shadow: 0 0 1rem cyan;
+     background-color:rgb(3, 3, 156) ;
+    width:85%;
+    height: 11rem;
+}
+footer {
+height: 90vh;
+background: var(--dark-black);
+}
+footer .container{
+    justify-self:center;
+    display : grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+}
+footer .container .conctitle{
+    grid-column: 1/4;
+    text-align: center;
+    padding: 2% 0;
+}
+footer .container h2{
+    padding: 2rem 0;
+    text-align: center;
+}
+footer .container ul{
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    text-align: justify;
+    margin-left: 2rem;
+}
+footer .container ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+footer .container ul li a:hover{
+color:#35e0f7;
+}
+footer .container .BOX{
+   border: 1px solid cyan;
+}
+footer .container .contact .inp{
+    width: 90%;
+    height: 6rem;
+    border-radius: 3rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: block;
+    font-size: medium;
+    border: none;
+}
+footer .container .socialmed li a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer .container .contact p{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    margin-left: 2rem;
+}
+footer .inp:active{
+    border: none;
+}
+footer .container img{
+    width: 15%;
+    height: 15%;
+}
+footer .container .contact .btn{ 
+   margin: 10% 20% 0%;
+}
+footer .container .last{
+     grid-column: 1/4;
+     text-align: center;
+     padding: 2% 0;
+}
+
