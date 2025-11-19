@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
     <title>Welcome | personal portifolio</title>
-
-    <link rel="stylesheet" href="https://www.dafont.com/retro-british.font">
     
-</head>
+</head> 
 <body>
     <!-- hero section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="container">
             <nav>
                 <div class="logo">
@@ -21,11 +18,11 @@
 
                 </div>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Development</a></li>
-                    <li><a href="">Skill</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#dev">Development</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="mid">
@@ -34,25 +31,26 @@
             <div class="last">
                 <div class="left">
                     <div class="in_left">
-                        <!-- https://cdn-icons-png.flaticon.com/512/9437/9437514.png" alt="Wave haND -->
-                    <h2>Hey There<img src="https://cdn-icons-png.flaticon.com/512/9437/9437514.png" width="50px" height="50px">, I'am </h2>
+                      
+                    <h2>Hey There<img src="personal/h.jpg" width="80px" height="80px">, I' am </h2>
                     <h1>Tesfaye Ayele</h1>
                     <h2>Software Engineering Student and<h2>
                         <h2>Fronted Developer</h2>
                          
 
-                    <button>Read More</button>
+                    <button >Read More</button>
                     </div>
                 </div>
                 <div class="right">
                     <div class="imgcontainer">
-                        <img src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="">
+                        <img src="personal/laptop.jpg" alt="laptop">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about">
+    <!-- about section -->
+    <section id="about" class="about">
         <div class="container">
             <div class="left">
                <div class="imgcon">
@@ -69,11 +67,13 @@
             </div>
         </div>
     </section>
-    <section class="development">
+    <!-- development section -->
+    <section id="dev" class="development">
         <div class="container">
             <div class="devtitle">
                 <h1>Development</h1>
             </div>
+            <div class="boxs">
             <div class="box">
                 <div class="in_box">
                     <div class="icon">
@@ -120,15 +120,17 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
-    <section class="skill">
+    <section id="skill" class="skill">
         <div class="container">
             <div class="tittleskill">
                 <h1>Skill</h1>
             </div>
-            <div class="left">
+            <div class="skill-content">
+                <div class="left">
                 <div class="skillcontainer">
-                                <div class="in_skill">
+              <div class="in_skill">
                 <h2>Technical Skills</h2>
             <li><h3>HTML</h3>
             <span class="bars"><span class="html"></span></span>
@@ -146,41 +148,45 @@
             <span class="bars"><span class="sql"></span></span>
             </li>
             </div>
-                </div>
             </div>
-            <div class="right">
+            </div>
+              <div class="right">
                 <div class="projectContainer">
                     <div class="projtitle">
                     <h2>Projects</h2>
                      </div>
-               <a href="" class="projectbox">
+               <a href="https://github.com/Waan-ofii/Amazon" class="projectbox">
                     <h2>Amazon Website</h2>
-                    <em><p>Created an Amazon-inspired e-commerce website for practice.</p></em>
+                    <p>Created an Amazon-inspired e-commerce website for practice.</p>
                 </a> 
-                <a href="" class="projectbox">
+                <a href="https://github.com/Waan-ofii/web-app-and-web-project/tree/main/Bankist" class="projectbox">
                     <h2>Bankist Website</h2>
-                    <em><p>Built to practice DOM manipulation and JavaScript interactivity.</p></em>       
+                    <p>Built to practice DOM manipulation and JavaScript interactivity.</p>       
                 </a>
-                <a href="" class="projectbox">
+                <a href="https://github.com/Waan-ofii/web-app-and-web-project" class="projectbox">
                     <h2>Mini Projects</h2>
-                   <em><p>Developed small JavaScript projects—calculator, to-do, game. </p></em> 
+                   <p>Developed small JavaScript projects—calculator, to-do, game. </p> 
                 </a>
                 </div>
             </div>
+                
+            </div>
         </div>
     </section>
-    <footer>
+    <!-- contact section -->
+    <footer id="contact">
         <div class="container">
             <div class="conctitle">
-                <h1>Let Me Get You A Beautiful Website</h1>
+                <h1>I Would Love To Build You A Stunning Website</h1>
             </div>
-            <div class="socialmed BOX">
+            <div class="links">
+                <div class="socialmed BOX">
                 <h2>Get me here</h2>
                 <ul>
-                <li><a href=""><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="facebook">Facebook</a></li>
-                <li><a href=""><img src="https://cdn-icons-png.flaticon.com/512/270/270798.png" alt="github">Github</a></li>
-                <li><a href=""><img src="https://cdn-icons-png.flaticon.com/512/4494/4494498.png" alt="linkedin">Linkedin</a><li> 
-                <li><a href=""><img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="whatsapp">Whatsapp</a></li>       
+                <li><a href=""><img src="personal/face.png" alt="facebook">Facebook</a></li>
+                <li><a href="https://github.com/Waan-ofii"><img src="personal/github (1).png" alt="github">Github</a></li>
+                <li><a href=""><img src="personal/linkedin.png" alt="linkedin">Linkedin</a><li> 
+                <li><a href=""><img src="personal/wats.png" alt="whatsapp">Whatsapp</a></li>       
                 </ul>
             </div>
             <div class="quicklink BOX">
@@ -196,14 +202,16 @@
             <div class="contact BOX">
                 <h2>Contact Me</h2>
                 <form action="mailto:tasfayeayele636@gmail.com" method="POST" enctype="text/plain">
-                    <p><img src="https://cdn-icons-png.flaticon.com/512/552/552486.png" alt="email" width="50px" height="50px">tasfayeayele636@gmail.com</p>
+                    <p><img src="personal/email.png" alt="email" width="50px" height="50px">tasfayeayele636@gmail.com</p>
                     <input class="inp" type="text" placeholder="send us a message" >
                    
                      <input class="btn" type="submit" value="Send Message">
                 </form>
             </div>
+            </div>
+            
             <div class="last">
-            <p>2025 powered By Tesfaye Ayele | All rights are reserved</p>
+              <p>2025 powered By Tesfaye Ayele | All rights are reserved</p>
            </div>
         </div>
     </footer>

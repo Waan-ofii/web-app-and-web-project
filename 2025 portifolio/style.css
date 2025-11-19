@@ -3,15 +3,16 @@
     --black-blue : rgb(1, 1, 81);
     --blue-pink-glows : linear-gradient(to right , #35e0f7, #9a55f5,#ede8f3);
     --cyan-color: rgb(0, 255, 255);
+    
+
 }
 *{
     margin : 0px;
     padding : 0px;
     box-sizing: border-box;
-    font-size: 10px;
-      border: 1px solid red;  
+    font-size: 10px; 
+    /* border: 1px solid red; */
 }
-
 h1,h2,a,li{
 background: var(--blue-pink-glows);
     background-clip: text;
@@ -19,7 +20,8 @@ background: var(--blue-pink-glows);
 }
 h1{
     font-size: 5rem;
-    font-weight: bold;  
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;  
 }
 a{
     text-decoration: none;
@@ -28,6 +30,7 @@ a{
 }
 h2{
     font-size: 3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 p{
   color: #4dd9f5;
@@ -64,44 +67,43 @@ button:active,.btn:active{
 }
 /*hero-section*/
 .hero{
+    width: 100%;
     background:var(--dark-black);
     color:white;
 }
 .hero .container{
     justify-self:center;
-    height: 100vh;
-    display:grid;
-    grid-template-rows:10% 30% 60%;
+    width: 90%;
 }
 .hero nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    height: 10vh;
+    margin-bottom: 10vh;
 }
 .hero nav .logo{
-    width: 50%;
+    width: 20%;
     display: flex;
     gap:2%;
     align-items: center;
-    padding: 2.5%;
 }
 .hero nav .logo img{
     width: 8rem;
-    height: auto;
+    height: 8rem;
     border-radius: 50%;
+    object-fit: cover;
 }
 .hero nav ul{
-    width: 50%;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    margin: 0% auto;
 }
 .hero nav ul li{
     list-style: none;
-    padding: 2% 5%;
-}
-.hero nav ul li a{
-    padding: 3%;
+    
 }
 .hero nav ul li a:hover{
 color: rgb(39, 242, 195);
@@ -110,34 +112,38 @@ color: rgb(39, 242, 195);
     color: blue;
 }
 .hero .mid{
-    margin: auto;
+    text-align: center;
+    padding: 4% 0;
 }
 .hero .last{
-   display: grid;
-    grid-template-columns: 50% 50%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 2.5% 0;
 }
 .hero .last .left{
-    width: 100%;  
+    width: 540px;  
 }
 .hero .last .in_left{
-margin: auto 10%;
-height: 80%;
+width: 500px;
 }
 .hero .last .in_left h2{
   padding: 2% auto;
-  line-height: 3rem;
+  line-height: 4rem;
 }
 .hero .last .in_left button{
     margin-top: 10%;
 }
 .hero .last .right{
+    width: 540px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 3rem 1rem;
 }
 .hero .last .imgcontainer{
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 300px;
     display: flex;
     align-items:center ;
     justify-content: center;
@@ -160,33 +166,38 @@ height: 80%;
     }
 }
 /*about-section*/
-
 .about{
     background: var(--black-blue);
-    height: 80vh;
+    width: 100%;
+    
 }
 .about .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     justify-self:center;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 3rem 0;
+    width: 90%;
+    padding: 3% 0;
+     
+}
+.about .container .left{
+    width: 540px;
+}
+.about .container .right{
+    width: 540px;
 
 }
-
 .about .container .imgcon{
     height: 95%;
-    width: 90%;
+    width: 100%;
     justify-self:center;
-    margin: 2.5% 0;
-
+    align-self: center;
+    margin: 2.5% auto;
 }
 .about .container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 .about .container h1,
 .about .container h2{
@@ -195,7 +206,6 @@ height: 80%;
 .about .container p{
  padding: 2% 2%;
  text-align: justify;
- 
 }
 .about .container button{
  margin: 7% 20%;
@@ -204,35 +214,34 @@ height: 80%;
 .development{
     width: 100%;
     background: var(--dark-black);
-    height: 90vh;
-
 }
 .development .container{
     justify-self:center;
-    width: 95%;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    justify-content: space-around;
+    width: 90%;
 }
 .development .container .devtitle{
- grid-column: 1/4;
- margin-bottom: 1rem;
- align-self: center;
  text-align: center;
+ padding: 2% 0;
 }
+.development .container .boxs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 
+}
 .development .container .box{
     border-radius: 3rem;
     height: 40rem;
-    background: var(--black-blue); 
+    width: 400px;
+    background: var(--black-blue);
+    margin-bottom: 4rem; 
 }
 .development .container .box .in_box{
     width: 100%;
     border-radius: 3rem;
 }
 .development .container .box:hover{
-    position: relative;
-    top: -2%;
     background-color:rgb(3, 3, 156) ;
 }
 .development .container .box h2{
@@ -241,7 +250,7 @@ height: 80%;
 .development .box .icon{
     justify-self: center;
     padding: 2%;
-    margin-bottom:2% ;
+    margin-bottom:2%;
 }
 .development .box .subtitle{
     padding: 5% 1%;
@@ -252,33 +261,34 @@ text-align: justify;
 }
 /*skill-section*/
 .skill{
-    
-   background: var(--black-blue); 
-    height: 90vh;
+ width: 100%;
+ background: var(--black-blue); 
 }
-
 .skill .container{
-    justify-self:center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    justify-self: center;
 }
 .skill .container .tittleskill{
-    grid-column: 1/3;
     text-align: center;
-    align-self: center;
-    
+    margin-bottom: 2rem;    
 }
 .skill .container .tittleskill h1{
  padding: 2rem;
 }
+.skill .container .skill-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 .skill .container .left{
-   width: 100%;
-   height: 47rem;  
+    width: 550px;
+    margin-bottom: 3rem;
 }
 .skill .container .left .skillcontainer{
   background-color: black;
-  width:  85%;
-  height: 100%;
+  width:  100%;
+  height: 50rem;;
   padding:5%  5%;
   border-radius: 3rem;
   justify-self: center;
@@ -286,7 +296,7 @@ text-align: justify;
 }
 .skill .left .skillcontainer .in_skill{
     height: 100%;
-    display:grid;
+    display: grid;
     border-radius: 3rem;
 }
 .skill .skillcontainer  li{
@@ -331,22 +341,20 @@ text-align: justify;
     width:55%;
 }
 .skill .right{
-    
-    
+  width: 550px;
+  margin-bottom: 3rem;     
 }
 .skill .right .projectContainer{
     background-color: #000;
-    height: 47rem;
+    height: 50rem;
     justify-self: center;
     border-radius: 3rem;
     display: grid;
-    gap:1rem;
-    justify-content: center;
+    gap:2rem;
     text-align: center;
-    padding: 3% 2%;
 }
 .skill .right .projectContainer p{
-    text-align: justify;
+  text-align: justify;
 }
 .skill .right .projectbox{
     background: var(--black-blue);
@@ -362,24 +370,39 @@ text-align: justify;
     width:85%;
     height: 11rem;
 }
+/* footer section */
 footer {
-height: 90vh;
 background: var(--dark-black);
+width: 100%;
 }
 footer .container{
+    width:90%;
     justify-self:center;
-    display : grid;
-    grid-template-columns: 30% 30% 30%;
-    justify-content: space-around;
+
+}
+footer .container .links{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
 }
 footer .container .conctitle{
-    grid-column: 1/4;
     text-align: center;
-    padding: 2% 0;
+    padding: 3% 0;
+    margin-bottom: 3%;
 }
 footer .container h2{
-    padding: 2rem 0;
+    padding: 3% 0;
     text-align: center;
+}
+footer .container .socialmed{
+    width:350px;
+}
+footer .container .quicklink{
+    width:350px;
+}
+footer .container .contact{
+    width:450px;
 }
 footer .container ul{
     display: grid;
@@ -398,9 +421,16 @@ color:#35e0f7;
 }
 footer .container .BOX{
    border: 1px solid cyan;
+   margin-left: 2rem;
+   margin-bottom: 3rem;
+}
+footer .container .socialmed li a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 footer .container .contact .inp{
-    width: 90%;
+    width: 70%;
     height: 6rem;
     border-radius: 3rem;
     margin: 2rem auto;
@@ -409,30 +439,63 @@ footer .container .contact .inp{
     font-size: medium;
     border: none;
 }
-footer .container .socialmed li a{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 footer .container .contact p{
     display: flex;
     align-items: center;
     gap:1rem;
     margin-left: 2rem;
 }
-footer .inp:active{
-    border: none;
-}
 footer .container img{
     width: 15%;
     height: 15%;
 }
 footer .container .contact .btn{ 
-   margin: 10% 20% 0%;
+   margin: 5% 20%;
 }
 footer .container .last{
-     grid-column: 1/4;
      text-align: center;
-     padding: 2% 0;
+     padding: 3rem 0;
 }
-
+@media (max-width:740px){
+    html{
+        font-size: 7px;
+    }
+    a{
+    
+    font-size: 1.6rem;
+}
+    .hero nav{
+        width: 355px;
+    }
+    .hero nav .log{
+    width: 25%;
+    }
+    .hero nav .log h2{
+    font-size: 2.4rem;
+    }
+    .hero nav .logo img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    .hero nav ul{
+    width: 70%;
+    }
+    .container{
+        justify-self: center;
+    }
+      
+.hero .last .left{
+    width: 355px; 
+}
+.hero .last .in_left{
+width: 345px;
+}
+}
+@media (max-width: 1200px){
+    .container{
+        justify-self: center;
+    }
+      
+}
