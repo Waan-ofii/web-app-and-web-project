@@ -2,16 +2,17 @@ function mouseIn(id){
     const inputNum = document.getElementById(id);
     inputNum.style.backgroundColor ="lightblue";
 }
-// function mouseIn2(id){
-//     const inputNum = document.getElementById(id);
-    
-// }
 function mouseLeave(id){
     const inputNum = document.getElementById(id);
     inputNum.style.backgroundColor ="white";
 }
+// function mouseIn2(id){
+//     const inputNum = document.getElementById(id);
+    
+// }
+
 // function numberValidation(id){
-//     const legalDigit = /^\d+[\.d+)?$/;
+//     const legalDigit = ;
 //     const inputNum = document.getElementById(id);
 //    // const oper = document.querySelector(".form-select");
 //      const elementError = document.getElementById(id+"_error");
@@ -29,19 +30,20 @@ function mouseLeave(id){
 // }
 
 
-function writeData(id){
-    const inputField = document.getElementById(id).value.trim();
-    const elementError = document.getElementById(id + "_error").value;
-    elementError.innerHTML = inputField;
+// function writeData(id){
+//     const inputField = document.getElementById(id).value.trim();
+//     const elementError = document.getElementById(id + "_error").value;
+//     elementError.innerHTML = inputField;
     
-}
+// }
 
 // const elementError = document.getElementById(id + "_error").trim();
 
+// Number validation
 function numberValidation(id){
     const legalDigit = /^\d+(\.\d+)?$/;
     const inputField = document.getElementById(id).value.trim();
-    const elementError = document.getElementById(id + "_error").trim();
+    const elementError = document.getElementById(id + "_error");
 
     if(inputValue.length === 0){
        elementError.innerHTML ="this field is required";
@@ -51,16 +53,15 @@ function numberValidation(id){
      elementError.style.color= "red";
 }else{
     elementError.innerHTML = "";
+ }
 }
-}
-
+// culculate
 const culculate = document.getElementById("btnc");
 culculate.style.backgroundColor = "orange";
       culculate.addEventListener('click', function(){
         const num1 =document.getElementById("num1").value.trim();
         const num2 =document.getElementById("num2").value.trim();
-        const Op =document.getElementById("Operator").value;
-        
+        const Op =document.getElementById("Operator").value;       
         const result = Operator(Number(num1),Number(num2),Op);
         document.getElementById("result").innerHTML = result;
         console.log(result);
@@ -79,10 +80,9 @@ function Operator(num1,num2,Op){
             break;
         case "/":
             return num1/num2;
-
     }
 }
-
+// Name validation
 function nameValidation(id){
     const field = document.getElementById(id);
     const inputField = document.getElementById(id).value.trim();
@@ -111,7 +111,7 @@ function nameValidation(id){
         field.style.backgroundColor="white";
     }
 }
-
+// Email validation
 function emailValidation(id){
     const field = document.getElementById(id);
     const inputField =document.getElementById(id).value.trim();
