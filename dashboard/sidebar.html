@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar push</title>
+    <style>
+        .app{
+            display: flex;
+        }
+        aside{
+            height: 90vh;
+            width: 250px;
+            background-color: rgb(5, 122, 122);
+
+        }
+        aside.hide{
+        width: 0;
+
+        }
+        main{
+          height: 90vh;
+          background-color: rgb(228, 28, 215);
+          width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="btn">></button>
+    </header>
+    <div class="app">
+        <aside class="side">
+            ok
+        </aside>
+        <main class="main">
+            main
+        </main>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn');
+        const side = document.querySelector('.side');
+
+        btn.addEventListener('click',function(){
+            side.classList.toggle('hide');
+        })
+        
+    </script>
+</body>
+</html>
