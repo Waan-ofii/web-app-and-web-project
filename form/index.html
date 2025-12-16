@@ -11,56 +11,18 @@
             justify-self: center;
             background-color: rgb(163, 163, 243);
             padding: 20px;
+            margin-bottom: 20px;
             
       } 
+      form button{
+        margin-top: 20px;
+      }
         form h1{
             text-align: center;
         }
-        .arthemetic_operation{
-            width: 600px;
-            justify-self: center;
-            background-color: rgb(228, 240, 132);
-            padding: 20px;
-            margin-bottom: 40px;
-        }
-        .arthemetic_operation button{
-          margin: 10px;
-        }
     </style>
 </head>
-<body>
- <div class="arthemetic_operation">
-        <div class="input-group mb-3">
-  <span class="input-group-text" id="FirstNumber">First Number</span>
-  <input type="text" name="num1" id="num1" 
-  onmouseenter="mouseIn(this.id)" 
-  onmouseleave="mouseLeave(this.id)"
-  onkeyup="numberValidation(this.id)"
-  placeholder="first Number">
-  </div>
-
-<p id="num1_error"></p>
-<div class="input-group mb-3">
-  <span class="input-group-text">second Number</span>
-  <input type="text" name="num2" id="num2" onmouseenter="mouseIn(this.id)" onmouseleave="mouseLeave(this.id)" 
-  onkeyup="numberValidation(this.id)" 
-  placeholder="Second Number">
-  
-</div>
-<p id="num2_error"></p>
-<select class="form-select" aria-label="Default select example" id="Operator">
-  <option selected>Open this select menu</option>
-  <option value="+">Addition</option>
-  <option value="*">Multiple</option>
-  <option value="/">Division</option>
-  <option value="-">Subs</option>
-</select>
-<div class="col-12">
-    <button id="btnc" class="btn btn-culculate" type="submit">Culculate</button>
-  </div>
-<p id="result"></p>
-    </div>
-    
+<body>   
 <div class="formContainer">
   <form action="">
   <h1>Registeration Form</h1>
@@ -116,17 +78,19 @@
 <div class="input-group mb-3">
 <span class="input-group-text" id="basic-addon1">Phone number</span>
   <input 
-  id="tel"
+  id="phone"
   name="telephone"
   type="tel" 
   class="form-control" 
-  placeholder="+251 9"
+  placeholder="phone number"
    onmouseenter="mouseIn(this.id)" 
   onmouseleave="mouseLeave(this.id)"
+  onkeyup="phoneValidation(this.id)"
   aria-label="Username" 
   aria-describedby="basic-addon1">
-  <p id="tel_error"></p>
+  <p id="phone_error"></p>
 </div>
+
 <!-- gender -->
  <div class="input-group mb-3">
 <span class="input-group-text" id="basic-addon1">Gender : </span>
@@ -155,6 +119,7 @@
   placeholder="username"
    onmouseenter="mouseIn(this.id)" 
   onmouseleave="mouseLeave(this.id)"
+  onkeyup ="usernameValidation(this.id)"
   aria-label="Username" 
   aria-describedby="basic-addon1">
   <p id="username_error"></p>
@@ -170,6 +135,7 @@
   placeholder="password"
    onmouseenter="mouseIn(this.id)" 
   onmouseleave="mouseLeave(this.id)"
+  onkeyup="passwordValidation(this.id)"
   aria-label="Username" 
   aria-describedby="basic-addon1">
   <p id="password_error"></p>
@@ -178,31 +144,17 @@
 <div class="input-group mb-3">
 <span class="input-group-text" id="basic-addon1">Confirm password</span>
   <input 
-  id="confirm"
-  name="confirm"
+  id="confirmPassword"
+  name="confirm password"
   type="password" 
   class="form-control" 
-  placeholder="email"
+  placeholder="password"
    onmouseenter="mouseIn(this.id)" 
   onmouseleave="mouseLeave(this.id)"
-  aria-label="Username" 
+  onkeyup="confirmPassword(this.id)"
+  aria-label="password" 
   aria-describedby="basic-addon1">
-  <p id="confirm_error"></p>
-</div>
-<!-- department -->
- <div class="input-group mb-3">
- <span class="input-group-text" id="basic-addon1">departments</span>
-<select class="form-select" aria-label="Default select example">
-  
-  <option selected>select...</option>
-  <option value="Aerospace Engineering">Aerospace Engineering</option>
-  <option value="Biomedical Engineering">Biomedical Engineering</option>
-  <option value="Chemical Engineering">Chemical Engineering</option>
-  <option value="Electrical Engineering">Electrical Engineering</option>
-  <option value="Material Engineering">Material Engineering</option>
-  <option value="Mechanical Engineering">Mechanical Engineering</option>
-  <option value="Software Engineering">Software Engineering</option>
-</select>
+  <p id="confirmPassword_error"></p>
 </div>
 <!-- Birth date -->
 <div class="input-group mb-3">
@@ -215,10 +167,27 @@
   placeholder=""
    onmouseenter="mouseIn(this.id)" 
   onmouseleave="mouseLeave(this.id)"
+  onkeyup="birthdateValidation(this.id)"
   aria-label="Username" 
   aria-describedby="basic-addon1">
   <p id="date_error"></p>
 </div>
+<!-- department -->  
+ <div class="input-group mb-3">
+ <span class="input-group-text" id="basic-addon1">departments</span>
+ <select class="form-select" aria-label="Default select example">
+  
+  <option selected>select...</option>
+  <option value="Aerospace Engineering">Aerospace Engineering</option>
+  <option value="Biomedical Engineering">Biomedical Engineering</option>
+  <option value="Chemical Engineering">Chemical Engineering</option>
+  <option value="Electrical Engineering">Electrical Engineering</option>
+  <option value="Material Engineering">Material Engineering</option>
+  <option value="Mechanical Engineering">Mechanical Engineering</option>
+  <option value="Software Engineering">Software Engineering</option>
+</select>
+</div>
+
 <!-- upload file -->
 <div class="input-group mb-3">
   <label class="input-group-text" for="inputGroupFile01">Upload</label>
@@ -231,13 +200,16 @@
   <span class="input-group-text">write example</span>
   <textarea class="form-control" aria-label="With textarea"></textarea>
 </div>
-           </form>
-      </div>
-    
-    
-   
+
+<div class="col-12">
+    <button class="btn btn-primary" 
+    type="submit"
+    id="registerbtn">Register</button>
+  </div>
+      </form>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="form.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
