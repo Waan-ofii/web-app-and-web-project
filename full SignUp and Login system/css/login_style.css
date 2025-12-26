@@ -25,6 +25,9 @@ h1{
     text-align:center;
     font-size:25px;  
 }
+.err{
+    color:red;
+}
 .box input{
     width: 100%;
     margin:20px;
